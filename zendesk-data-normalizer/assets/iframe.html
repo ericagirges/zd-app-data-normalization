@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ticket Data Normalizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <div>
+        <h1>Data Normalizer</h1>
+        <p>Clean, predictable ticket JSON for downstream systems.</p>
+      </div>
+      <button id="refreshButton" class="secondary" type="button">Refresh</button>
+    </header>
+
+    <section class="options" aria-label="Normalization options">
+      <label><input id="includeEmail" type="checkbox" /> Include requester email</label>
+      <label><input id="includeInternal" type="checkbox" /> Include internal notes</label>
+    </section>
+
+    <div id="status" class="status" role="status">Loading ticket…</div>
+
+    <section>
+      <div class="output-header">
+        <strong>Normalized payload</strong>
+        <button id="copyButton" type="button" disabled>Copy JSON</button>
+      </div>
+      <pre id="output" aria-label="Normalized JSON"></pre>
+    </section>
+  </main>
+
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "app": {
+    "name": "Ticket Data Normalizer",
+    "short_description": "Normalize Zendesk ticket data into clean JSON.",
+    "long_description": "Normalizes the current Zendesk Support ticket into a predictable JSON structure suitable for AI models, integrations, logging, and downstream APIs."
+  }
+}
